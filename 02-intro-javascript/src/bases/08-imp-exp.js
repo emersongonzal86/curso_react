@@ -19,9 +19,10 @@ import  {heroes,owners }  from './bases/data/heroes';
 
 */
 
-import  heroes, {owners }  from './bases/data/heroes';
+//import  heroes, {owners }  from '../bases/data/heroes';
+import  heroes  from '../bases/data/heroes';
 
-console.log(owners);
+//console.log(owners);
 //import { heroes } from './bases/data/heroes';
 
 //import {heroes} from './bases/data/heroes';
@@ -47,15 +48,15 @@ console.log( getHeroeById(5));*/
 
 //refactorizando y funciona igual
 
-const getHeroeById =(id) => heroes.find( (heroes) => heroes.id===id);
+export const getHeroeById =(id) => heroes.find( (heroes) => heroes.id===id);
 
 
-console.log( getHeroeById(4));
+//console.log( getHeroeById(4));
 
 //Tarea usar filter traer todos 
 
-const getHeroesByOwner =(owner) => heroes.filter( (heroes) => heroes.owner === owner);
-console.log(getHeroesByOwner('Marvel'));
+export const getHeroesByOwner =(owner) => heroes.filter( (heroes) => heroes.owner === owner);
+//console.log(getHeroesByOwner('Marvel'));
 
 //Multiples importaciones y exportaciones
 /* hay varias formas de hacer importaciones y exortaciones primero vamos 
