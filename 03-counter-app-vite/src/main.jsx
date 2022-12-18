@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+//autoimportado a tenet encuenta desestructurar
+//si en el componente no existe un export default
+import {FirstApp} from './FirstApp';
 //autoimportado
 import HelloWordApp from './HelloWordApp';
 
@@ -24,8 +27,10 @@ import HelloWordApp from './HelloWordApp';
 
 //Aca vamos a renderizar la aplicación
 
+
 ReactDOM.createRoot( document.getElementById('root')).render(
     <React.StrictMode>
-        <HelloWordApp />
+        
+        <FirstApp />
     </React.StrictMode>
 );
