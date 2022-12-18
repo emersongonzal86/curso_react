@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom/client';
 import {FirstApp} from './FirstApp';
 //autoimportado
 import HelloWordApp from './HelloWordApp';
+//imporar estilos css
+import './styles.css'
 
 //importación de componente cuando solo es uno
 //import moduleName from './HelloWordApp'
