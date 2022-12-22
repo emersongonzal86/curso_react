@@ -28,11 +28,12 @@ import './styles.css'
 //debe borrarse el texto del nombre del componente
 
 //Aca vamos a renderizar la aplicación
-
+//subTitle={123} se utilizan llaves para pasar numeros como props
+// <FirstApp title="Hola soy Emerson" subTitle={123} /> todo lo que se define luego FirstApp son props
 
 ReactDOM.createRoot( document.getElementById('root')).render(
     <React.StrictMode>
         
-        <FirstApp />
+        <FirstApp title="Hola soy Emerson" subTitle={123} />
     </React.StrictMode>
 );
