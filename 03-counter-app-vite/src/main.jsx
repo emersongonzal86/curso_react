@@ -30,10 +30,11 @@ import './styles.css'
 //Aca vamos a renderizar la aplicación
 //subTitle={123} se utilizan llaves para pasar numeros como props
 // <FirstApp title="Hola soy Emerson" subTitle={123} /> todo lo que se define luego FirstApp son props
+// la forma corta de mandar un booleano es solo indicando la prop como por ejemplo title <FirstApp title/> eso manda el valor como true
 
 ReactDOM.createRoot( document.getElementById('root')).render(
     <React.StrictMode>
         
-        <FirstApp title="Hola soy Emerson" subTitle={123} />
+        <FirstApp title="Hola, soy Emerson" subTitle={ 123 }/>
     </React.StrictMode>
 );

@@ -1,15 +1,11 @@
-//COMUNICACIÓN ENTRE COMPONENTES -Props
+//PropTypes
+/*para usra prop-types en vite debe instalarse manualmente usando el comando yarn add prop-types
+se importa mediante import PropTypes from 'prop-types'; OJO CON LAS MAYUSCULAS Y MINUSCULAS*/
 
-/*props son las propiedades que le enviamos a una funcion 
-las props son objetos por los cuales fluye informacion desde un  componente padre a un componente hijo
-en este ejemplo desde el archivo main puedo enviar informacion al componente FirstApp.jsx
-las props siempre se desestructuran xport const FirstApp = ({title}) => {
-y se pueden llamar directo  <h1>{title}</h1>
-
-{subTitle +1 } le sumo uno al valor enviado como props desde main
+/*
 
 */
-
+import PropTypes from 'prop-types';
 
 export const FirstApp = ({title, subTitle}) => {
 
@@ -19,9 +15,19 @@ export const FirstApp = ({title, subTitle}) => {
       <>
       <h1>{ title }</h1>
           {/* <code>{JSON.stringify(newMessage)}</code> */}
-          <p> Soy un subtitulo {subTitle +1 }</p>
+          <p> { subTitle }</p>
           
       </>
       
       )
+  }
+
+  //definiendo las proptypes OJO CON LAS MAYUSCULAS Y MINUSCULAS
+// title: PropTypes.string esto valida que sea un string
+//isRequired lo define como requerido title: PropTypes.string.isRequired
+
+
+  FirstApp.propTypes ={
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.number,
   }
