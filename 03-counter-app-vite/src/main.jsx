@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 //autoimportado a tenet encuenta desestructurar
 //si en el componente no existe un export default
-import {FirstApp} from './FirstApp';
+//import {FirstApp} from './FirstApp';
 //autoimportado
-import HelloWordApp from './HelloWordApp';
+//import HelloWordApp from './HelloWordApp';
 //imporar estilos css
 import './styles.css'
+import {CounterApp}  from './CounterApp'
 
 //importación de componente cuando solo es uno
 //import moduleName from './HelloWordApp'
@@ -35,6 +36,6 @@ import './styles.css'
 ReactDOM.createRoot( document.getElementById('root')).render(
     <React.StrictMode>
         
-        <FirstApp />
+        <CounterApp value={1} />
     </React.StrictMode>
 );
