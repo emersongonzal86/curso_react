@@ -1,9 +1,7 @@
-//UseState - Hook
-//los Hooks son lo primero que se importa
-/*REGLA
-la palabra use identifica que es un Hook para nombrarlos simepre debe iniciar con use
-NUESTRO hOOKS PERSONALIZADOS DEBEN SEGUIR ESA REGLA
-*/
+//handleSubtract y handleReset
+//hay que tener encuenta que cuando hay un cambio en el estado se dispara y renderiza
+//completo de nuevo el functionalcomponent
+
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -21,6 +19,11 @@ export const CounterApp = ({value}) => {
     //setCounter((c)=> c+1)
     
   }
+
+  const handleSubtract =() => setCounter( counter - 1);
+  // para el reset voy a pasar el valor que viene del componente padre en main.jsx
+  const handleReset = () => setCounter ( value );
+  }
     
     return (
 
@@ -31,9 +34,9 @@ export const CounterApp = ({value}) => {
          
           <h2> { counter }</h2>
         
-        <button onClick={ handleAdd }>
-          +1
-        </button>
+        <button onClick={ handleAdd }> +1 </button>
+        <button onClick={ handleSubtract }> -1 </button>
+        <button onClick={ handleReset}> Reset </button>
           
       </>
       
