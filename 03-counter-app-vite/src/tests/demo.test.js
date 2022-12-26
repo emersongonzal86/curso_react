@@ -1,13 +1,23 @@
-//Mi primera prueba y configuraciones necesarias para pruebas 
-//las instalaciones deben hacerse porque vite no trae el componente de pruebas preconfigurado
-// vamos a usar jets https://jestjs.io/
-//en el package.json  "test": "jest --watchAll" se agrega para generar las pruebas
-// y evitar el tener que escribir en consola yarn test cada vez para ejecutarlas
-//
+//Jest - Expect - toBe
+//instalar la dependencia de desarrollo yarn add -D @types/jests para obtener la 
+//ayuda de visual studio code de los Expect de jest los metodos como el toBe
+// para crea agrupadores de pruebas se utiliza describe
 
-test('Esta prueba no puede fallar', () =>{
+describe('Pruebas en <DemaComponent />',() => {
+    
+    test('Esta prueba no puede fallar', () =>{
 
-    if( 0 === 1 ){
-        throw new Error('No puede dividir entre ceo');
-    }
-})
+        // 1. Inicializacion de la prueba
+     
+        const message1 = 'Hola Mundo';
+     
+        // 2. Estímulo
+         //eliminar espacios al inicio y final del mensaje
+        const message2 = message1.trim();
+     
+        //3. Observar el comportamiento esperado
+     
+        expect( message1 ).toBe( message2 );
+     });
+});
+
