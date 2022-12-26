@@ -13,30 +13,27 @@ export const CounterApp = ({value}) => {
     setCounter( counter + 1);
 //otra forma de hacer el incremento en uno usando funciones de flecha
     //setCounter((c)=> c+1)
-    
   }
-
+  
   const handleSubtract =() => setCounter( counter - 1);
   // para el reset voy a pasar el valor que viene del componente padre en main.jsx
   const handleReset = () => setCounter ( value );
-  }
-    
-    return (
 
+  return (
+
+    <>
+    <h1>Counter App</h1>
+       
+        <h2> { counter }</h2>
       
-
-      <>
-      <h1>Counter App</h1>
-         
-          <h2> { counter }</h2>
+      <button onClick={ handleAdd }> +1 </button>
+      <button onClick={ handleSubtract }> -1 </button>
+      <button onClick={ handleReset}> Reset </button>
         
-        <button onClick={ handleAdd }> +1 </button>
-        <button onClick={ handleSubtract }> -1 </button>
-        <button onClick={ handleReset}> Reset </button>
-          
-      </>
-      
-      )
+    </>
+    
+    );
+    
   }
 
   CounterApp.propTypes ={
