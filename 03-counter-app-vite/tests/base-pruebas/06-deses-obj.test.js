@@ -17,6 +17,9 @@ describe('Pruebas en desestructuración de objetos', () =>{
         
         const context = usContext( persona );
 
+        //console.log(context)
+
+
         expect( context ).toStrictEqual({ 
             nombreClave: 'Ironman',
             anios: 45,
