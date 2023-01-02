@@ -41,5 +41,5 @@ export const FirstApp = ({title, subTitle, name}) => {
   FirstApp.defaultProps ={
     name:'Emerson gonzález',
     subTitle: 'No hay Subtítulo',
-    title:'No hay título',
+    //title:'No hay título',
   }
