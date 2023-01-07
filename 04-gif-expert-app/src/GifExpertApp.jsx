@@ -8,6 +8,10 @@ export const GifExpertApp = () => {
 
   const onAddCategory =( newCategory ) => {
  
+    //validar si la categoria existe con el include y con el retur sale de la funcion
+    // si el if tiene una sola linea se puede abreviar if( categories.includes( newCategory ) ) return;
+    // no es necesario colocar las llaves
+    if( categories.includes( newCategory ) ) return;
     //console.log(newCategory);
     setCategories([ newCategory, ...categories])
 
