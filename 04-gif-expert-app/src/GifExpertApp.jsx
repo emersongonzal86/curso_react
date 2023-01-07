@@ -1,20 +1,14 @@
 // Agregando una nueva categoria
 import { useState } from 'react';
-export const GifExpertApp = () => {
+import { AddCategory } from './components/AddCategory';
 
+export const GifExpertApp = () => {
 
   const [categories, setCategories] = useState([ 'One Punch', 'Dragon Ball']);
 
   const onAddCategory =() => {
-    // los tres puntos antes de categories se usan para desestructurar el objeto
-    //de esta forma inserta una nueva categoria al final de la lista
-    setCategories([...categories,'Nueva Categoria']);
-
-    //de esta manera insterna la nueva categoria l inicio de la lista 
+ 
     setCategories(['Nueva CAtegoria', ...categories])
-
-    //La siguiente es otra forma de hacerlo utilizando el elemento callback de setCategories
-    // setCategories(cat => [...cat, 'Nueva categoria']);
 
   }
 
@@ -25,7 +19,7 @@ export const GifExpertApp = () => {
         <h1>GifExpertApp</h1>
 
     {/*Input */}
-
+      <AddCategory />
 
     {/** Listado de Gifs */}
 
