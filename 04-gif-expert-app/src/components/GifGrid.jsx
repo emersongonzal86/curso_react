@@ -1,26 +1,14 @@
-//Mostrar los titulos de las imagenes
-
-import { useState, useEffect } from 'react';
+//Custom Hook
 
 import { GifItem } from './GifItem';
 
-import { getGifs } from '../helpers/getGifs';
+import { useFetchGifs } from '../hooks/useFetchGifs';
 
 export const GifGrid = ({ category }) => {
 
-  const [images, setImages] = useState([]);
+  const { images, isLoading } = useFetchGifs( category );
 
-  const getImages = async () => {
-    const newImages = await getGifs(category);
-    setImages(newImages);
-  }
-
-  useEffect(() => {
-    getImages();
-  }, [])
-
-
-
+  
   return (
     <>
 
