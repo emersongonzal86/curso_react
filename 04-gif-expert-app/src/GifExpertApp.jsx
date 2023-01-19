@@ -1,7 +1,7 @@
-// GifGrid
+// utilizando archivo barril
 import { useState } from 'react';
-import { AddCategory } from './components/AddCategory';
-import { GifGrid } from './components/GifGrid';
+import { AddCategory , GifGrid } from './components';
+
 
 export const GifExpertApp = () => {
 
