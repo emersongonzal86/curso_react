@@ -18,7 +18,7 @@ describe('Pruebas en <GifItem/>',() =>{
         //expect(screen.getByRole('img').src).toBe( url );
         //expect(screen.getByRole('img').alt).toBe( alt );
 
-        const { setPointerCapture, alt} = screen.getByRole('img');
+        const { src, alt} = screen.getByRole('img');
         expect ( src ).toBe( url );
         expect ( alt ).toBe( alt );
     });
