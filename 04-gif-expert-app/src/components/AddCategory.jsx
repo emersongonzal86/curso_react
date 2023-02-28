@@ -12,7 +12,8 @@ export const AddCategory = ( { onNewCategory }) => {
     }
 
     const onSubmit = ( event ) =>{
-       
+        //el siguiente console.log se utiliza para verificar que el submit se este ejecutando en la prueba
+       //console.log('Hola mundo desde onSubmit');
        event.preventDefault(); 
        if(inputValue.trim().length <=1) return;
        
@@ -22,12 +23,12 @@ export const AddCategory = ( { onNewCategory }) => {
     }
 
     return (
-        <form onSubmit={ onSubmit }>
+        <form onSubmit={ onSubmit } aria-label="form" >
             <input
                 type="text"
                 placeholder="Buscar Gifs"
-                value={inputValue}
-                onChange={onInputChange}
+                value={ inputValue }
+                onChange={ onInputChange }
             />
         </form>
     )
