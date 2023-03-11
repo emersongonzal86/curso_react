@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Message } from './Message';
 
 export const SimpleForm = () => {
 
@@ -28,18 +29,22 @@ export const SimpleForm = () => {
 
     // este useefect se dispara cuando carga el formulario
     useEffect( () =>{
-        console.log('useEffect se llamó');
+        // console.log('useEffect se llamó');
     },[]);
 
 //este useEfect se dispara cada vez que hay un cambio en el formulario
     useEffect( () =>{
-        console.log('formState changed');
+        // console.log('formState changed');
     },[ formState ]);
 // este useEfect se dispara cuando cambia el correo sirve en validacion del correo
 
     useEffect(()=>{
-        console.log('email changed');
+        // console.log('email changed');
     },[ email ]);
+
+
+
+
 
     return (
         <>
@@ -67,6 +72,10 @@ export const SimpleForm = () => {
 
             />
 
+
+               {
+                (username === 'Emerson2') &&  <Message />
+               }
         </>
     )
 }
