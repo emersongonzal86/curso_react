@@ -17,6 +17,10 @@ export const useForm = ( initialForm = {} ) => {
 
     }
 
+    const onResetForm = () => {
+        setFormState( initialForm );
+    }
+
     return{
         //desestructuro el formState para obtener todos sus valores y ahorra la desestructuracion en el FormWithCustomHook
         // asi pasamos todos los valores del formulario para tenerlso dsiponibles en 
@@ -29,6 +33,7 @@ export const useForm = ( initialForm = {} ) => {
         ...formState,
         formState,
         onInputChange,
+        onResetForm,
 
     }
 }
