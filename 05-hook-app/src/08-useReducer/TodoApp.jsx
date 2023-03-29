@@ -27,10 +27,10 @@ export const TodoApp = () => {
     const handleNewTodo = (todo) => {
         const action = {
             type: '[TODO] Add Todo',
-            pauload: todo
+            payload: todo
         }
 
-        dispatch( action );
+        dispatch(action);
     }
 
     return (
@@ -40,14 +40,14 @@ export const TodoApp = () => {
 
             <div className="row">
                 <div className="col-7">
-                    <TodoList todos={ todos } />
+                    <TodoList todos={todos} />
                 </div>
 
                 <div className="col-5">
 
                     <h4>Agregar TODO</h4>
                     <hr />
-                    <TodoAdd onNewTodo={ handleNewTodo }/>
+                    <TodoAdd onNewTodo={handleNewTodo} />
 
                 </div>
 
