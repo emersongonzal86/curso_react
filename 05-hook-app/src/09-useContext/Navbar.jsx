@@ -1,11 +1,12 @@
 import { Link, NavLink } from 'react-router-dom';
+
 export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary roundes-3">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">useContext</Link>
         
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div className="collapse navbar-collapse" id="navbarNav">
           <div className="navbar-nav">
             
             <NavLink 
